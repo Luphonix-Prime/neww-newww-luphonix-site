@@ -346,6 +346,35 @@ function renderSection(name) {
   }[name]();
 }
 
+function initAnimations() {
+  const els = document.querySelectorAll('h1, h2, h3, p:not(.eyebrow), .btn, article, .teal-note, img, .client-title, .logos > img, .number-band > div, details, .project-grid a');
+  
+  let delayCounter = 0;
+  let resetTimeout = null;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.style.transitionDelay = `${delayCounter * 100}ms`;
+        el.classList.add('is-visible');
+        delayCounter++;
+        obs.unobserve(el);
+      }
+    });
+    
+    clearTimeout(resetTimeout);
+    resetTimeout = setTimeout(() => {
+      delayCounter = 0;
+    }, 100);
+  }, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+
+  els.forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+}
+
 function render() {
   const key = document.body.dataset.page || "index";
   const page = pages[key] || pages.index;
@@ -354,6 +383,10 @@ function render() {
     ? page.sections.map(renderSection).join("")
     : `${page.kind?.startsWith("home") ? hero(page) : pageTitle(page)}${page.sections.map(renderSection).join("")}`;
   document.body.innerHTML = `${header()}<main>${main}</main>${footer()}`;
+  
+  // Initialize scroll animations immediately to prevent flashing
+  initAnimations();
 }
 
 render();
+

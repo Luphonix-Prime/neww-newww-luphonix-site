@@ -406,3 +406,15 @@ p { color: var(--muted); }
   .award-row { gap: 18px; }
   .special-page form { grid-template-columns: 1fr; }
 }
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
