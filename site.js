@@ -28,7 +28,7 @@ const assets = {
 
 const pages = {
   "index": {
-    title: "Creativity meets innovation",
+    title: "Digital Innovation That Drives Results",
     kicker: "Creative agency",
     kind: "home",
     image: assets.hero1,
@@ -70,7 +70,7 @@ const pages = {
     sections: ["services", "process", "quote", "case-study", "clients", "special"]
   },
   "home-7": {
-    title: "Build better digital products with Shir",
+    title: "Build better digital products with Luphonix",
     kicker: "Product design",
     kind: "home-collage",
     image: assets.bg2,
@@ -150,7 +150,7 @@ const pageLinks = [
 function header() {
   return `
     <header class="site-header">
-      <a class="brand" href="index.html"><span class="brand-mark"><i></i><i></i><i></i></span><strong>Shir</strong></a>
+      <a class="brand" href="index.html"><span class="brand-mark"><i></i><i></i><i></i></span><strong>Luphonix</strong></a>
       <nav class="main-nav" aria-label="Main navigation">
         <div class="nav-group"><a href="index.html">Home</a><div class="submenu">${homeLinks.map(link).join("")}</div></div>
         <a href="about.html">About us</a>
@@ -172,18 +172,18 @@ function footer() {
   return `
     <footer class="site-footer">
       <div class="footer-inner">
-        <a class="brand" href="index.html"><span class="brand-mark white"><i></i><i></i><i></i></span><strong>Shir</strong></a>
+        <a class="brand" href="index.html"><span class="brand-mark white"><i></i><i></i><i></i></span><strong>Luphonix</strong></a>
         <div class="footer-grid">
-          <div><p>123 Main street, Area name, Location name, Country - 123456</p><p class="phone">Call us on<br><strong>0123456789</strong></p></div>
+          <div><p>Ahmedabad, Gandhinagar, Gujarat - India</p><p class="phone">Call us on<br><strong>+91-97254-87298</strong></p></div>
           <nav><a href="index.html">Home</a><a href="about.html">About us</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact us</a><a href="blog.html">Blog</a></nav>
           <form><h2>Subscribe to our newsletter</h2><p>Subscribe for our monthly newsletter to stay updated</p><label><span>Email</span><input type="email" placeholder="Enter your email"></label><button aria-label="Submit">›</button></form>
         </div>
-        <small>© Copyright c-kav.com</small>
+        <small>© Copyright luphonix.com</small>
       </div>
     </footer>`;
 }
 
-const lipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.";
+const lipsum = "Transform your business with cutting-edge technology and expert development services tailored to your unique needs.";
 
 function hero(page) {
   const collage = page.kind === "home-collage" ? " hero-collage" : "";
@@ -197,7 +197,7 @@ function hero(page) {
       </div>
       <div class="clone-art">
         <img src="${page.image}" alt="">
-        <div class="teal-note">Specialized in Web Design, UX / UI, Branding, and Front-End Development</div>
+        <div class="teal-note">Specialized in Web Development, Mobile Apps, AI/ML, and 3D Visualization</div>
       </div>
     </section>`;
 }
@@ -206,14 +206,14 @@ function pageTitle(page) {
   return `<section class="page-title"><h1>${page.title}</h1><p>Home / ${page.title}</p></section>`;
 }
 
-const serviceNames = ["Website design and development", "UX/UI design and testing", "Mobile app design and development", "Brand identity and logo design", "Graphic design and illustration", "Social media marketing", "SEO and PPC services", "Content creation and marketing", "Video and motion graphics"];
+const serviceNames = ["Web Development", "UI/UX Design", "Mobile App Development", "E-Commerce Solutions", "AI & ML Solutions", "3D & WebGL Development", "Cloud Infrastructure", "Blockchain Development", "Custom Software"];
 
 function services() {
-  return `<section class="section split-intro"><div><p class="eyebrow">Our services</p><h2>Digital solutions for your business</h2><p>${lipsum}</p></div><div class="service-cards">${serviceNames.slice(0,4).map((s,i)=>`<article class="service-card ${["teal","yellow","coral","teal"][i]}"><span>${["⌘","▤","△","▣"][i]}</span><h3>${s}</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
+  return `<section class="section split-intro"><div><p class="eyebrow">Our services</p><h2>Digital Solutions for Your Business</h2><p>${lipsum}</p></div><div class="service-cards">${serviceNames.slice(0,4).map((s,i)=>`<article class="service-card ${["teal","yellow","coral","teal"][i]}"><span>${["⌘","▤","△","▣"][i]}</span><h3>${s}</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
 }
 
 function serviceHero() {
-  return `<section class="section service-hero"><img src="${assets.bg3}" alt=""><div class="three-cols">${["Creative", "Digital", "Analytics"].map(x=>`<article><p class="eyebrow">${x}</p><h3>Graphic design and illustration</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
+  return `<section class="section service-hero"><img src="${assets.bg3}" alt=""><div class="three-cols">${["Creative", "Digital", "Analytics"].map(x=>`<article><p class="eyebrow">${x}</p><h3>AI & ML Solutions</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
 }
 
 function serviceMatrix() {
@@ -241,7 +241,7 @@ function finalSplit() {
 }
 
 function about() {
-  return `<section class="section about-grid"><div class="about-copy"><p class="eyebrow">Our story</p><h2>Digital solutions for your business</h2><p class="lead">${lipsum}</p><img src="${assets.content2}" alt=""><p>${lipsum}</p><a class="btn" href="contact.html">Get free quote</a></div><div class="about-feature"><img class="feature-img" src="${assets.portfolio[0]}" alt=""><div class="mini-grid">${serviceNames.slice(0,4).map((s,i)=>`<div class="${i===0||i===3?"teal":""}"><span>▣</span><strong>${s}</strong></div>`).join("")}</div></div><img class="vr-wide" src="${assets.bg1}" alt=""><div class="about-statement"><h2>Innovative design solutions for your business</h2><p class="lead">${lipsum}</p></div></section>`;
+  return `<section class="section about-grid"><div class="about-copy"><p class="eyebrow">Our story</p><h2>Digital Solutions for Your Business</h2><p class="lead">${lipsum}</p><img src="${assets.content2}" alt=""><p>${lipsum}</p><a class="btn" href="contact.html">Get free quote</a></div><div class="about-feature"><img class="feature-img" src="${assets.portfolio[0]}" alt=""><div class="mini-grid">${serviceNames.slice(0,4).map((s,i)=>`<div class="${i===0||i===3?"teal":""}"><span>▣</span><strong>${s}</strong></div>`).join("")}</div></div><img class="vr-wide" src="${assets.bg1}" alt=""><div class="about-statement"><h2>Innovative design solutions for your business</h2><p class="lead">${lipsum}</p></div></section>`;
 }
 
 function numbers() {
@@ -249,7 +249,7 @@ function numbers() {
 }
 
 function processBanner() {
-  return `<section class="result-banner"><img src="${assets.bg2}" alt=""><div class="result-cards"><h2>How we deliver results</h2>${["Discovery and research","Design and development","Testing and feedback","Launch and optimization"].map(x=>`<article><strong>${x}</strong><p>${lipsum}</p></article>`).join("")}</div></section>`;
+  return `<section class="result-banner"><img src="${assets.bg2}" alt=""><div class="result-cards"><h2>How We Deliver Results</h2>${["Discovery and research","Design and development","Testing and feedback","Launch and optimization"].map(x=>`<article><strong>${x}</strong><p>${lipsum}</p></article>`).join("")}</div></section>`;
 }
 
 function team() {
@@ -258,7 +258,7 @@ function team() {
 }
 
 function cta() {
-  return `<section class="cta-band"><div><h2>Ready to get started?</h2><p>${lipsum}</p></div><div><span>Call us on</span><strong>0123456789</strong><a class="btn" href="contact.html">Contact us now</a></div></section>`;
+  return `<section class="cta-band"><div><h2>Ready to get started?</h2><p>${lipsum}</p></div><div><span>Call us on</span><strong>+91-97254-87298</strong><a class="btn" href="contact.html">Contact us now</a></div></section>`;
 }
 
 function quote() {
@@ -282,7 +282,7 @@ function awards() {
 }
 
 function approach() {
-  return `<section class="section split-intro"><div><p class="eyebrow">Our approach</p><h2>Digital solutions for your business</h2><p>${lipsum}</p></div><div class="service-cards">${["Research","Design","Develop","Optimize"].map((x,i)=>`<article class="service-card ${i%2?"yellow":"teal"}"><span>↗</span><h3>${x}</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
+  return `<section class="section split-intro"><div><p class="eyebrow">Our approach</p><h2>Digital Solutions for Your Business</h2><p>${lipsum}</p></div><div class="service-cards">${["Research","Design","Develop","Optimize"].map((x,i)=>`<article class="service-card ${i%2?"yellow":"teal"}"><span>↗</span><h3>${x}</h3><p>${lipsum}</p></article>`).join("")}</div></section>`;
 }
 
 function contactStrip() {
@@ -294,7 +294,7 @@ function portfolioFeature() {
 }
 
 function projectDetail() {
-  return `<section class="section project-detail"><img src="${assets.detail}" alt=""><div><p class="eyebrow">Project details</p><h2>Content creation and marketing</h2><h3>Transforming your marketing strategy for the digital age</h3><p>${lipsum}</p></div><img src="${assets.portfolio[8]}" alt=""><img src="${assets.portfolio[9]}" alt=""></section>`;
+  return `<section class="section project-detail"><img src="${assets.detail}" alt=""><div><p class="eyebrow">Project details</p><h2>Blockchain Development</h2><h3>Transforming your marketing strategy for the digital age</h3><p>${lipsum}</p></div><img src="${assets.portfolio[8]}" alt=""><img src="${assets.portfolio[9]}" alt=""></section>`;
 }
 
 function teamHero() {
@@ -322,7 +322,7 @@ function notFound() {
 }
 
 function blog() {
-  const titles = ["Qui lorem, imperdiet non turpis nec", "Nunc faucibus eros eget sagittis porttitor", "Nunc erat arcu, venenatis ac congue", "Donec at nibh sit amet magna tempor tincidunt", "Interdum vitae nunc ac, pharetra ullamcorper sem", "Aliquam dictum nec libero sed gravida"];
+  const titles = ["Design That Thinks: How LUPHONIX Blends AI and UX", "LUPHONIX and Blockchain: Building a Decentralized Future", "Full-Stack Development Excellence: The LUPHONIX Approach", "Donec at nibh sit amet magna tempor tincidunt", "Interdum vitae nunc ac, pharetra ullamcorper sem", "Aliquam dictum nec libero sed gravida"];
   return `<section class="section blog-grid">${titles.map((t,i)=>`<article><img src="${assets.blogs[i]}" alt=""><p class="eyebrow">Design</p><h2>${t}</h2><p>${lipsum}</p><a href="#">Read more</a></article>`).join("")}</section>`;
 }
 
@@ -378,7 +378,7 @@ function initAnimations() {
 function render() {
   const key = document.body.dataset.page || "index";
   const page = pages[key] || pages.index;
-  document.title = `${page.title} - Shir`;
+  document.title = `${page.title} - Luphonix`;
   const main = page.kind === "special"
     ? page.sections.map(renderSection).join("")
     : `${page.kind?.startsWith("home") ? hero(page) : pageTitle(page)}${page.sections.map(renderSection).join("")}`;
